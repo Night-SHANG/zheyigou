@@ -1,0 +1,26 @@
+artisticdude — Swishes Sound Pack
+https://opengameart.org/content/swishes-sound-pack
+License: CC0-1.0
+Author records wood sticks/clothes hanger moving through air, not cards.
+
+EZduzziteh — Pop sounds
+https://opengameart.org/content/pop-sounds-0
+License: CC0-1.0
+Author describes poppy bubble sound effects, tagged casual/cute/vocal.
+
+Kenney — Impact Sounds 1.0
+https://kenney.nl/assets/impact-sounds
+License: CC0-1.0
+Distinct light/medium wooden impact sources; not Interface Sounds.
+
+Fupi — Win Jingle / WinMutedGuitar.wav
+https://opengameart.org/content/win-jingle
+License: CC0-1.0
+Author explicitly describes successful action/end of level. Selected muted guitar variation, not inferred from numeric filename. Original stereo WAV.
+
+GabrielAraujo — Failure/wrong action.wav
+https://freesound.org/people/GabrielAraujo/sounds/242503/
+License: CC0-1.0
+Author explicitly describes failure/wrong action. Downloaded public HQ MP3 preview transcode, not original WAV. Source category Electronic/Design; not claimed to be acoustic wood.
+
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/

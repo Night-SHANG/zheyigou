@@ -1,0 +1,12 @@
+{
+  "description": "这一钩捞什么：独立小游戏试玩工程。导入时填写自己的小游戏 AppID。",
+  "projectname": "zheyigou-playtest",
+  "compileType": "game",
+  "miniprogramRoot": "./",
+  "appid": "",
+  "setting": {
+    "es6": true,
+    "minified": false,
+    "urlCheck": true
+  }
+}

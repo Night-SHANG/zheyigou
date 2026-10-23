@@ -1,0 +1,68 @@
+{
+  "preparedOn": "2026-10-23",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "assets": [
+    {
+      "file": "ui-click.wav",
+      "role": "Single menu/button confirmation",
+      "author": "Dustyroom",
+      "sourceUrl": "https://dustyroom.com/free-casual-game-sounds/",
+      "originalSourceFile": "DM-CGS-32.wav",
+      "license": "CC0-1.0",
+      "localInput": "mao-ui-revision/assets/audio/approved-button/ui_click.wav",
+      "inputSha256": "64417ece36e1f91639f61ebac38634245cd251829bc0ee67805c42c41b9ce512",
+      "sha256": "637a5ac403af0ba9a6a98db51105facb730cbdce94aa1f15baeabffdea1d2cca",
+      "durationSeconds": 0.18714285714285714,
+      "peakLinear": 0.108001708984375,
+      "peakDbFS": -19.33138744644406,
+      "processing": "ffmpeg decode to stereo PCM16 44100 Hz; amplitude gain 0.10929331471665664 baked once. No synthesis, pitch shift, EQ, layering, or trimming.",
+      "recommendedPlaybackVolume": 1.0
+    },
+    {
+      "file": "pickup.wav",
+      "role": "Soft bubble-like salvage pickup",
+      "author": "EZduzziteh",
+      "sourceUrl": "https://opengameart.org/content/pop-sounds-0",
+      "originalSourceFile": "pop2.wav",
+      "license": "CC0-1.0",
+      "localInput": "mao-ui-revision/assets/audio/cozy-effects-v1/match.wav",
+      "inputSha256": "c8d844c4e811111c72f6e9ae09780684690e69d64ab9d4442f3928a19f82d68c",
+      "sha256": "d0df468aaeb62e0bad36ae7841e4938f578f77d5e1aa7660b6b2f5adcbbc6a05",
+      "durationSeconds": 0.07539682539682539,
+      "peakLinear": 0.1356201171875,
+      "peakDbFS": -17.353517693817757,
+      "processing": "ffmpeg decode to stereo PCM16 44100 Hz; amplitude gain 0.45 baked once. No synthesis, pitch shift, EQ, layering, or trimming.",
+      "recommendedPlaybackVolume": 1.0
+    },
+    {
+      "file": "net-cut.wav",
+      "role": "Brief stylized cut/movement cue; source is a swish, not an underwater net recording",
+      "author": "artisticdude",
+      "sourceUrl": "https://opengameart.org/content/swishes-sound-pack",
+      "originalSourceFile": "swish-10.wav",
+      "license": "CC0-1.0",
+      "localInput": "mao-ui-revision/assets/audio/cozy-effects-v1/swap.wav",
+      "inputSha256": "0e8582ebb392c7b2fe568d7077f58544ced98fc0eb55680ba62d50064fe310ea",
+      "sha256": "f5af7ce4a39a72893b7a5fbbc99a6d9db296d366c64f189ee226eaa21bfb75fb",
+      "durationSeconds": 0.12498866213151927,
+      "peakLinear": 0.15814208984375,
+      "peakDbFS": -16.01905052619824,
+      "processing": "ffmpeg decode to stereo PCM16 44100 Hz; amplitude gain 0.16 baked once. No synthesis, pitch shift, EQ, layering, or trimming.",
+      "recommendedPlaybackVolume": 1.0
+    }
+  ],
+  "verification": {
+    "allDecode": true,
+    "peakHeadroomChecked": true,
+    "subjectiveListening": false,
+    "userDevicePlayback": false
+  },
+  "integration": "All gains are baked into WAVs. Use playback volume 1.0 or a lower master volume, never reapply source gains. Unlock audio on user gesture; respect mute; cap overlapping voices to avoid summation overload. These are existing licensed samples, not newly synthesized effects.",
+  "evidenceHashes": {
+    "source-evidence/Dustyroom-CC0-LICENSE.pdf": "fa3693afc38aac134361b33d0b73cd7bc1300fdca8c87af813c64fa91b218cca",
+    "source-evidence/Original-Source-Licenses.txt": "259aab7283d9c85e12c1aaee30a75e6befcdfde136486ccddd5422eae01d9963",
+    "source-evidence/original-button-provenance.json": "b6e6d1556e1a0590225c8c5baa131bbc1c4522a2c834876d7f6b27748ebb3ff6",
+    "source-evidence/original-cozy-effects-provenance.json": "52754414135033064442bd81a83aeb1281a3b90ca7fbe8deb3fcc677161da806"
+  }
+}
