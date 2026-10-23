@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: '22'
       - run: npm install --no-save playwright
-      - run: npx playwright install --with-deps chromium
+      - run: google-chrome --version
       - run: npm run build && npm test
       - run: node scripts/browser-qa.js
+        env:
+          QA_BROWSER_CHANNEL: chrome
