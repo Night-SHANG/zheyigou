@@ -16,7 +16,7 @@ for record in font['name'].names:
 if 'CFF ' in font:
     cff=font['CFF '].cff;cff.fontNames=['HarborSans'];cff.topDictIndex[0].FullName='Harbor Sans';cff.topDictIndex[0].FamilyName='Harbor Sans'
 font.flavor='woff';font.save(root/'assets/fonts/harbor-sans.woff')
-license=Path('/usr/share/doc/fonts-noto-cjk/copyright').read_text();license=license[license.index('License: SIL-1.1\n ------------------------------------------------'):];license='Copyright 2010-2012 Google Corporation\n\n'+license
+license=Path('/usr/share/doc/fonts-noto-cjk/copyright').read_text();license=license[license.index('License: SIL-1.1\n ------------------------------------------------'):];license='Copyright 2014-2021 Adobe (http://www.adobe.com/)\nCopyright 2010-2012 Google Corporation\n\n'+license
 (root/'assets/fonts/LICENSE.txt').write_text(license)
 (root/'assets/fonts/SOURCE.md').write_text('# Harbor Sans subset\n\nDerived from Noto Sans CJK SC Regular, supplied by the fonts-noto-cjk package. Only characters used by the game plus printable ASCII are retained. Renamed Harbor Sans and redistributed under SIL Open Font License 1.1.\n\nUpstream: https://github.com/notofonts/noto-cjk\n')
 print('Font subset:',(root/'assets/fonts/harbor-sans.woff').stat().st_size,'bytes')
