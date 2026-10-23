@@ -105,7 +105,7 @@ module.exports={createGame,step,act,togglePause,getContextAction,snapshot,restor
 const TAU=Math.PI*2;
 function path(ctx,pts,fill,stroke='#103e43',lw=2){ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(...p):ctx.moveTo(...p));ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.lineWidth=lw;ctx.strokeStyle=stroke;ctx.stroke()}}
 function round(ctx,x,y,w,h,r,fill,stroke,lw=1){ctx.beginPath();r=Math.max(0,Math.min(r,w/2,h/2));ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.lineWidth=lw;ctx.strokeStyle=stroke;ctx.stroke()}}
-function text(ctx,s,x,y,size=14,color='#fff',align='left',weight=600){ctx.fillStyle=color;ctx.font=`${weight} ${size}px "PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif`;ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillText(s,x,y)}
+function text(ctx,s,x,y,size=14,color='#fff',align='left',weight=600){ctx.fillStyle=color;ctx.font=`${weight} ${size}px "Harbor Sans","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif`;ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillText(s,x,y)}
 function line(ctx,x1,y1,x2,y2,col,width=2){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=col;ctx.lineWidth=width;ctx.stroke()}
 function circle(ctx,x,y,r,fill,stroke,lw=2){ctx.beginPath();ctx.arc(x,y,r,0,TAU);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke()}}
 function button(ctx,b){const primary=b.primary;const g=ctx.createLinearGradient(0,b.y,0,b.y+b.h);g.addColorStop(0,primary?'#ffe58a':'#25677a');g.addColorStop(1,primary?'#f2ae33':'#104257');round(ctx,b.x,b.y+4,b.w,b.h,13,primary?'#805122':'#042d40');round(ctx,b.x,b.y,b.w,b.h,13,g,primary?'#ffd88b':'#5293a0',1.5);text(ctx,b.label,b.x+b.w/2,b.y+b.h/2,b.size||17,primary?'#493018':'#e6f5ed','center',800);}
@@ -203,6 +203,7 @@ module.exports={createApp};
 },
 "web.js":function(require,module,exports){
 const {createApp}=require('./src/app');
+function boot(){
 const canvas=document.getElementById('game');
 const h=Math.min(innerHeight,900),w=Math.min(innerWidth,h*390/780);const height=h*390/w;const dpr=Math.min(devicePixelRatio||1,2);
 canvas.width=Math.round(390*dpr);canvas.height=Math.round(height*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';
@@ -215,5 +216,8 @@ window.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arr
 window.addEventListener('keyup',e=>app.key(e.key,false));window.addEventListener('blur',()=>app.clearKeys());
 window.addEventListener('error',e=>{const el=document.getElementById('error');el.style.display='block';el.textContent='启动遇到问题：'+e.message});
 window.__salvageApp=app;
+
+}
+if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(()=>{}).finally(boot);}else boot();
 
 }};const cache={};function load(id){if(cache[id])return cache[id].exports;const m={exports:{}};cache[id]=m;const req=(p)=>{const parts=id.split('/');parts.pop();for(const s of p.split('/')){if(s==='..')parts.pop();else if(s!=='.')parts.push(s);}let key=parts.join('/');if(!key.endsWith('.js'))key+='.js';return load(key);};modules[id](req,m,m.exports);return m.exports;}load('web.js');})();

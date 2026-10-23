@@ -1,4 +1,5 @@
 const {createApp}=require('./src/app');
+function boot(){
 const canvas=document.getElementById('game');
 const h=Math.min(innerHeight,900),w=Math.min(innerWidth,h*390/780);const height=h*390/w;const dpr=Math.min(devicePixelRatio||1,2);
 canvas.width=Math.round(390*dpr);canvas.height=Math.round(height*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';
@@ -11,3 +12,6 @@ window.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arr
 window.addEventListener('keyup',e=>app.key(e.key,false));window.addEventListener('blur',()=>app.clearKeys());
 window.addEventListener('error',e=>{const el=document.getElementById('error');el.style.display='block';el.textContent='启动遇到问题：'+e.message});
 window.__salvageApp=app;
+
+}
+if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(()=>{}).finally(boot);}else boot();
