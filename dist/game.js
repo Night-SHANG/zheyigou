@@ -218,6 +218,6 @@ window.addEventListener('error',e=>{const el=document.getElementById('error');el
 window.__salvageApp=app;
 
 }
-if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(()=>{}).finally(boot);}else boot();
+if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(e=>console.warn('Chinese font fallback:',e.message)).finally(boot);}else boot();
 
 }};const cache={};function load(id){if(cache[id])return cache[id].exports;const m={exports:{}};cache[id]=m;const req=(p)=>{const parts=id.split('/');parts.pop();for(const s of p.split('/')){if(s==='..')parts.pop();else if(s!=='.')parts.push(s);}let key=parts.join('/');if(!key.endsWith('.js'))key+='.js';return load(key);};modules[id](req,m,m.exports);return m.exports;}load('web.js');})();

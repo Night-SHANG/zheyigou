@@ -14,4 +14,4 @@ window.addEventListener('error',e=>{const el=document.getElementById('error');el
 window.__salvageApp=app;
 
 }
-if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(()=>{}).finally(boot);}else boot();
+if(typeof FontFace==='function'){new FontFace('Harbor Sans','url(assets/fonts/harbor-sans.woff)').load().then(font=>document.fonts.add(font)).catch(e=>console.warn('Chinese font fallback:',e.message)).finally(boot);}else boot();
